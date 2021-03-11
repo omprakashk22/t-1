@@ -1,1 +1,42 @@
-<p>page1 works!</p>
+<div class="container">
+    <div class="row mt-3">
+        <div class="offset-md-2 col-md-8">
+            <div class="card">
+                <div class="card-body text-center">
+                    <p class="title"> your in page1</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="offset-md-10 offset-5 col-sm-2 ">
+            <a class="btn btn-primary" routerLink="/page2">
+                page2
+            </a>
+        </div>
+    </div>
+    <div class="row mt-3">
+        <div class="offset-md-1 col-md-11">
+            <div class="container card">
+                <div class="table-responsive overflow-auto">
+                    <ngx-datatable
+                    class="ngx-datatable bootstrap"
+                    [rows]="userslist"
+                    [headerHeight]="50"
+                    [footerHeight]="50"
+                    [limit]="10"
+                    [rowHeight]="'auto'"
+                    [scrollbarH]="true"
+                    >
+                    <ngx-datatable-column [width]="30" [canAutoResize]="false" name="id" cellClass="d-flex align-items-center"></ngx-datatable-column>
+                    <ngx-datatable-column [width]="160" [canAutoResize]="false" name="name" cellClass="d-flex align-items-center"></ngx-datatable-column>
+                    <ngx-datatable-column [width]="200" [canAutoResize]="false" name="email" cellClass="d-flex align-items-center"></ngx-datatable-column>
+                    <ngx-datatable-column [width]="150" [canAutoResize]="false" name="phone" cellClass="d-flex align-items-center"></ngx-datatable-column>
+                    <ngx-datatable-column [width]="150" [canAutoResize]="false" name="company" cellClass="d-flex align-items-center"></ngx-datatable-column>
+                    <ngx-datatable-column [width]="300" [canAutoResize]="false" name="address" cellClass="d-flex align-items-center"></ngx-datatable-column>
+                    </ngx-datatable>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
